@@ -1,0 +1,240 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/* THIS LINE LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/* Start your base/mobile styles here */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+}
+
+#mainContent{
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: left;
+	max-width:800px;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+p{
+	font-family: 'helvetica';
+	font-size: 18px;
+	opacity: .8;
+}
+
+h2{
+font-size:24px;
+font-family:'helvetica';
+}
+
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	max-height: 400px;
+	max-width: 400px;
+	color: white;
+	padding: 1em;
+	z-index:10;
+	position:relative;
+
+	
+
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+	border-width: 3px; 
+	border-style: solid;
+	border-color: red;	
+}
+
+#topPhoto{
+	border-color: white;
+}
+
+.cardName{
+	position: absolute;
+	top: 80%;
+	left: 2%;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+
+}
+
+.cardPosition{
+	position: absolute;
+	top: 90%;
+	left: 2%;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 20px;
+
+}
+	
+
+.shade{
+	position: absolute;
+	background: #ABADA6;;
+	opacity: .6;
+	z-index: 6;
+	height: 100%;
+	width: 100%;
+}
+
+.cardInfo{
+	position: absolute;
+	top: 10%;
+	left: 1.5%;
+	text-align: center;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	z-index: 7;
+
+}
+
+#header{
+	font-weight:bold;
+}
+
+#totalContributions{
+	font-size: 40px;
+	font-weight:bold;
+    text-align:center;
+}
+
+.byline {
+  font-family: 'helvetica';
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 16px;
+  border-bottom: 1px solid #000000
+}
+
+#date{
+	font-family: 'helvetica';
+	font-size: 16px;
+	font-style: italic;
+	opacity:.6;
+	text-align:right;
+	border-bottom:1px solid #1f1f1f;
+}
+
+.caption{
+    font-style:italic;
+    font-size:14px;
+}
+
+table{
+	border:1px;
+	border-color:black;
+    width:98%;
+    max-height:300px;
+    overflow-x:auto;
+    overflow-y:scroll;
+    max-height:500px;
+}
+
+td, th {
+    width: auto;
+    display: table-cell;
+    font-family: "helvetica";
+    border: 1px solid black;
+    text-align: center;
+}
+
+tr:nth-child(even){
+	background-color:#f2f2f2;
+}
+
+
+input {
+    max-width: 300px;
+    display: block;
+    border:1px solid;
+    
+}
+
+#tableContainer{
+	overflow-y: scroll;
+	overflow-x: auto;
+	max-height: 500px;
+	max-width: 750px;
+	width: auto;
+	padding-bottom:20px;
+}
+
+h1{
+	font-size:40px;
+	font-family:'helvetica';
+	text-align:center;
+}
+
+#totalContributions{
+	font-size: 40px;
+	font-weight:bold;
+    text-align:center;
+}
+
+.byline {
+  font-family: 'helvetica';
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 16px;
+  border-bottom: 1px solid #000000
+}
+
+.caption{
+    font-style:italic;
+    font-size:14px;
+}
+
+#spacer{
+	font-size:20px;
+	color:white;
+}
+
+
+/* Tablet/Desktop overrides */
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    #container1{
+    	float:left;
+    }
+
+    #container2{
+    	float:right;
+    }
+
+  	#container3{
+  		float:left;
+  	}
+
+  	#container4{
+  		float:right;
+  	}
+}
+
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+}
